@@ -1,0 +1,10 @@
+import day8_assignmnt_def
+day8_assignmnt_def.sumDigits("ab34c3")
+day8_assignmnt_def.isPalindrome(day8_assignmnt_def.ignoredcase("wo ,w"))
+day8_assignmnt_def.negpo(1,-5,-2,3,7,-8,9,4)
+day8_assignmnt_def.ck("Hello, how are you!","!")
+day8_assignmnt_def.abbe("Ann Abraham Panackal")
+day8_assignmnt_def.mult(1,2,3,4,5,6,7,8,9)
+day8_assignmnt_def.divMul(5000,7500)
+day8_assignmnt_def.liTu(4,66,7,8,9,42)
+day8_assignmnt_def.Fibonacci(10)
