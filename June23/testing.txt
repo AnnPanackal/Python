@@ -1,0 +1,8 @@
+1, Tinu, 21, California, 28000
+2, Aysha, 18, Texas, 21000
+3, Salma, 25, Norway, 40000
+4, Lakshmi, 22, Rich-Mond, 44000
+5, Ann, 28, New York, 30000
+6, Amal, 34, Los Angels, 25000
+7, Joe, 40, Washington, 24000
+8,Luke,31,Miami,32000
