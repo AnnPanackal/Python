@@ -9,7 +9,7 @@ def sqlCode(c):
     s=""
     ans=c.execute("select * from COMPANY")
     for row in ans:
-        #p=','.join(str(row))
+        #p=','.join(row)
         s='\n'
     return(s)
     
