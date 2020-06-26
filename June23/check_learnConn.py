@@ -7,9 +7,10 @@ class test_unit(unittest.TestCase):
         with open('C:/Users/ann/AppData/Local/Programs/Python/Python38-32/Py_Training/testing.txt','r') as d:
             obj_r=d.read()
             #print(obj_r)
-        c,conn=connectionLearn.connectt()
+        conn=sqlite3.connect('C:/Users/ann/AppData/Local/Programs/Python/Python38-32/Py_Training/db_conn/connEg.db')
+        c=conn.cursor()
         #print(c,"\n",conn)
-        fn=learnConn.learnInsert.sqlCode(c)
+        fn=learnConn.sqlCode(c)
         #print(fn,"\n")
         self.assertEqual(fn,obj_r)
         

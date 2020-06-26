@@ -19,6 +19,7 @@ def sqlCode(c):
     
 if __name__=='__main__':
     c,conn=connection()
+    #c.execute(f'drop table COMPANY')
     c.execute('''create table if not exists COMPANY(ID INT PRIMARY KEY NOT NULL,
          NAME           TEXT    NOT NULL,
          AGE            INT     NOT NULL,
