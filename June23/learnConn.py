@@ -7,20 +7,23 @@ def connection():
 
 def sqlCode(c):
     s=""
-    ans=c.execute("select * from COMPANY")
+    ans=c.execute('select * from COMPANY')
     for row in ans:
-        #p=','.join(row)
-        s='\n'
+        #print(row," ",type(row))
+        p=[str(i) for i in row]
+        t=','.join(p)
+        #print(t)
+        s=s+t+'\n'
+
     return(s)
     
 if __name__=='__main__':
     c,conn=connection()
-    c.execute('delete from COMPANY')
     c.execute('''create table if not exists COMPANY(ID INT PRIMARY KEY NOT NULL,
          NAME           TEXT    NOT NULL,
          AGE            INT     NOT NULL,
          ADDRESS        CHAR(50),
-         SALARY         REAL)''')
+         SALARY         INT)''')
          
     with open('C:/Users/ann/AppData/Local/Programs/Python/Python38-32/Py_Training/testing.txt','r+') as filer:
         for line in filer.readlines():
