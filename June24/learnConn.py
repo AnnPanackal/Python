@@ -8,6 +8,7 @@ class learn():
             conn=sqlite3.connect(dbpath)
             cur=conn.cursor()
             return cur,conn
+            
         except Exception as e:
             return e
             
@@ -24,12 +25,13 @@ class learn():
                 l=logg_file.logg()
                 l.info("Selected")
             return(s)
+            
         except Exception as e:
                 print("Error: ",e)
-    def insert(self,c,conn):
-        ans=input('Enter the values ')
-        anss=ans.split(',')       
-        try:    
+    def insert(self,c,conn,ans):
+               
+        try: 
+            anss=ans.split(',')     
             c.execute(f'INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)'\
             f"VALUES ('{anss[0]}','{anss[1]}','{anss[2]}','{anss[3]}','{anss[4]}')")   
             conn.commit()
@@ -40,10 +42,8 @@ class learn():
             print("Error: ",e)
           
 
-    def updateCode(self,c,conn):
-        try:
-            d=input('Enter values to be updated')
-            du=d.split(',')
+    def updateCode(sel,c,conn,du):
+        try:           
             c.execute(f'UPDATE COMPANY set {du[0]} = "{du[1]}" where {du[2]}="{du[3]}"')
             conn.commit()
             l=logg_file.logg()
@@ -65,7 +65,7 @@ if __name__ == '__main__':
          AGE            INT     NOT NULL,
          ADDRESS        CHAR(50),
          SALARY         INT)''')
-    """     
+    """
     with open('C:/Users/ann/AppData/Local/Programs/Python/Python38-32/Py_Training/testing.txt','r+') as filer:
         for line in filer.readlines():
             fields = line.replace('\n','').split(',')
