@@ -5,7 +5,7 @@ import learnConn
 class test_unit(unittest.TestCase):
   
     def test_select(self):
-        conn=sqlite3.connect('C:/Users/ann/Desktop/Python_Acc/Python/June24/conn.db') 
+        conn=sqlite3.connect('C:/Users/ann/Desktop/Python_Acc/Python/June24/connEg.db') 
         c=conn.cursor()     
         #print(c,"\n",conn)
         s=""
