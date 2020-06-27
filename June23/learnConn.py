@@ -1,7 +1,7 @@
 import sqlite3
 
 def connection():
-    conn=sqlite3.connect('C:/Users/ann/AppData/Local/Programs/Python/Python38-32/Py_Training/db_conn/connEg.db')
+    conn=sqlite3.connect('C:/Users/ann/Desktop/Python_Acc/Python/June23/conn.db')
     c=conn.cursor()
     return c,conn
 
@@ -26,7 +26,7 @@ if __name__=='__main__':
          ADDRESS        CHAR(50),
          SALARY         INT)''')
          
-    with open('C:/Users/ann/AppData/Local/Programs/Python/Python38-32/Py_Training/testing.txt','r+') as filer:
+    with open('C:/Users/ann/Desktop/Python_Acc/Python/June23/testing.txt','r+') as filer:
         for line in filer.readlines():
             fields = line.replace('\n','').split(',')
             c.execute(f'INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)'\
